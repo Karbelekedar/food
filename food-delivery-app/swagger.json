@@ -1,0 +1,63 @@
+
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Food Delivery App API",
+      "version": "1.0.0",
+      "description": "API documentation for the food delivery app backend"
+    },
+    "host": "localhost:3000",
+    "basePath": "/api",
+    "schemes": [
+      "http"
+    ],
+    "paths": {
+      "/pricing": {
+        "post": {
+          "summary": "Calculate delivery price",
+          "description": "Calculates the delivery price based on the provided parameters",
+          "parameters": [
+            {
+              "name": "pricingData",
+              "in": "body",
+              "description": "Pricing data for calculation",
+              "required": true,
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "zone": {
+                    "type": "string"
+                  },
+                  "organization_id": {
+                    "type": "string"
+                  },
+                  "total_distance": {
+                    "type": "number"
+                  },
+                  "item_type": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "total_price": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Internal server error"
+            }
+          }
+        }
+      }
+    }
+  }

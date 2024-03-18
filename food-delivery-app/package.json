@@ -1,0 +1,21 @@
+
+{
+    "name": "food-delivery-app",
+    "version": "1.0.0",
+    "description": "Backend for a food delivery app with dynamic pricing",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js",
+      "test": "jest"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "pg": "^8.7.1",
+      "sequelize": "^6.6.5",
+      "swagger-ui-express": "^4.1.6"
+    },
+    "devDependencies": {
+      "jest": "^27.0.6",
+      "supertest": "^6.1.4"
+    }
+  }
